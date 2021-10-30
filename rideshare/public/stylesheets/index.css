@@ -1,0 +1,157 @@
+/* INDEX PAGE */
+
+row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-xs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 100%;
+}
+
+.col-sm-offset-2 {
+  margin-left: 16.666666666666664%;
+  float: left;
+  width: 66.66666666666666%;
+}
+
+body {
+  padding: 60px 0px;
+  background-color: rgb(220, 220, 220);
+}
+
+.event-list {
+  list-style: none;
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+.event-list > li {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px rgb(51, 51, 51);
+  box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+  padding: 0px;
+  margin: 0px 0px 20px;
+}
+.event-list > li > time {
+  display: inline-block;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(51, 5, 23);
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.event-list > li:nth-child(even) > time {
+  background-color: rgb(5, 95, 58);
+}
+.event-list > li > time > span {
+  display: none;
+}
+.event-list > li > time > .day {
+  display: block;
+  font-size: 56pt;
+  font-weight: 100;
+  line-height: 1;
+}
+.event-list > li time > .month {
+  display: block;
+  font-size: 24pt;
+  font-weight: 900;
+  line-height: 1;
+}
+.event-list > li > img {
+  width: 100%;
+}
+.event-list > li > .info {
+  padding-top: 5px;
+  text-align: center;
+}
+.event-list > li > .info > .title {
+  font-size: 17pt;
+  font-weight: 700;
+  margin: 0px;
+}
+.event-list > li > .info > .desc {
+  font-size: 13pt;
+  font-weight: 300;
+  margin: 0px;
+}
+.event-list > li > .info > ul,
+.event-list > li > .crud > ul {
+  display: table;
+  list-style: none;
+  margin: 10px 0px 0px;
+  padding: 0px;
+  width: 100%;
+  text-align: center;
+}
+.event-list > li > .crud > ul {
+  margin: 0px;
+}
+.event-list > li > .info > ul > li,
+.event-list > li > .crud > ul > li {
+  display: table-cell;
+  cursor: pointer;
+  color: rgb(30, 30, 30);
+  font-size: 11pt;
+  font-weight: 300;
+  padding: 3px 0px;
+}
+.event-list > li > .info > ul > li > a {
+  display: block;
+  width: 100%;
+  color: rgb(30, 30, 30);
+  text-decoration: none;
+}
+.event-list > li > .crud > ul > li {
+  padding: 0px;
+}
+.event-list > li > .crud > ul > li > a {
+  padding: 3px 0px;
+}
+.event-list > li > .info > ul > li:hover,
+.event-list > li > .crud > ul > li:hover {
+  color: rgb(30, 30, 30);
+  background-color: rgb(200, 200, 200);
+}
+#btndelete {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+.delete form,
+.edit a,
+.google-plus a {
+  display: block;
+  width: 100%;
+  color: rgb(75, 110, 168) !important;
+}
+.edit a {
+  color: rgb(79, 213, 248) !important;
+}
+.google-plus a {
+  color: rgb(221, 75, 57) !important;
+}
+.delete:hover form {
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(75, 110, 168) !important;
+}
+.edit:hover a {
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(79, 213, 248) !important;
+}

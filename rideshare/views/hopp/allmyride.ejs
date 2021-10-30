@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place Autocomplete Address Form</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500"
+      rel="stylesheet"
+    />
+<!-- <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/formstyle.css" /> -->
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <script src="../../public/javascripts/main.js"></script>
+  </head>
+  <body>
+    <!-- Note: The address components in this sample are based on North American address format. You might need to adjust them for the locations relevant to your app. For more information, see
+https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+    -->
+<!-- <div class="wrapper">
+  <div class="topnav">
+    <a href="hopp/dashboard">
+      <img src="/images/logo.png" width="60" height="50"></a>
+  </a>
+  <!-- <span class="navbar-text ml-auto">
+         Welcome to  HOP !, < user.name %> 
+        </span> -->
+  <!-- <a id="logout" href="/logout">Log out</a>
+</div></div><main>
+<div class="wrapper_middle">
+  <div id="mySidenav" class="sidenav">
+    <ul>
+      <li>
+        <a href="/hopp/dashboard/">Dashboard</a>
+      </li>
+      <li>
+        <a href="/hopp/destination/">
+          Destinations
+        </a>
+      </li>
+      <li>
+        <a href="/hopp/destination">Add a ride</a>
+      </li>
+      <li id="my-profile">
+        <a href="/hopp/profile">My Profile</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="formwrapper">
+  <div id="search-form">
+    <div id="header">
+      <h1>Where do you want to go?</h1>
+    </div>
+    <section>
+      <div class="ride" id="ridebox">
+        <form
+          action="./destination/new" method="POST" id="ride-form">
+          TRIP TYPE
+          <div id="rideType">
+            <div class="info-box">
+              <input type="radio" name="rideType" value="Rider" id="rider" checked/>
+              <label for="return">RIDER</label>
+            </div>
+            <div class="info-box">
+              <input type="radio" name="rideType" value="Driver" id="driver"/>
+              <label for="one-way">DRIVER</label>
+            </div>
+          </div>
+          <!-- FROM/TO -->
+          <!-- <div id="ride-depart">
+            <div class="info-box">
+              <label for="">LEAVING FROM</label>
+              <input type="text" id="dep-from" placeholder="From" name="originAdd"/>
+              <div id="depart-res"></div>
+            </div>
+            <div class="info-box" id="arrive-box">
+              <label for="">ARRIVING AT</label>
+              <input type="text" id="dep-to" placeholder="to" name="destinationAdd"/>
+              <div id="arrive-res"></div>
+            </div>
+          </div> -->
+          <!-- FROM/TO -->
+          <!-- <div id="ride-dates">
+            <div class="info-box">
+              <label for="">LEAVING ON</label>
+              <input type="datetime-local" id="leave-date" placeholder="date" name="leaveDate"/>
+            </div>
+            <div class="info-box" id="return-box">
+              <label for="">RETURNING ON</label>
+              <input type="date" id="return-date" placeholder="date" name="returnDate"/>
+            </div>
+          </div> -->
+          <!-- SEARCH BUTTON -->
+          <!-- <div id="ride-search">
+            <div class="info-box">
+              <input type="submit" id="search-ride" value="SAVE RIDE"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section> -->
+<!-- INDEX PAGE -->
+<main>
+  <section>
+  <div class="container">
+    <div class="row">
+      <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+        <div>
+          <ul class="event-list">
+            <% ridesOfUser.forEach(function(t) { %>
+              <li>
+                <time datetime="2014-07-20">
+                  <span class="day">
+                    <%= t.departs.getDay() %>
+                  </span>
+                  <span class="month"><%=  Intl.DateTimeFormat('en', { month: 'long' }).format(t.departs.getMonth()) %>
+                  </span>
+                </time>
+                <!-- <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg"/> -->
+                <div class="info">
+                  <h2 class="title">Trip to
+                    <%= t.toAddress %>
+                  </h2>
+                  <!-- <p class="desc"> extract city to address t.city </p> -->
+                </div>
+                <div class="crud">
+                  <ul>
+                      <li class="edit" style="width:34%;">
+                        <a href="/hopp/allmyrides/<%= t._id %> ">
+                        <button id="btndelete" type="submit" method="GET" class="btn-small red-text">EDIT</button>
+                      </a>
+                    </li>
+                    <li class="delete" style="width:33%;">
+                        
+                      <form action="/hopp/destination/delete/<%= t._id %>?_method=DELETE" method="POST" class="secondary-content">
+                        <button id="btndelete" type="submit" class="btn-small red-text">DELETE</button>
+                      </form>
+                      
+                    </li>
+     
+                  </ul>
+                </div>
+              </li>
+            <% }); %>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</main></body></html>

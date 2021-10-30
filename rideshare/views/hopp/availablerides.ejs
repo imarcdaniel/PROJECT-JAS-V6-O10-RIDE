@@ -1,0 +1,49 @@
+<%- include('../partials/header') %>
+<main>
+  <section>
+  <div class="container">
+    <div class="row">
+      <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+        <div>
+          <ul class="event-list">
+            <% journeyAval.forEach(function(t) { %>
+              <li>
+                <time datetime="2014-07-20">
+                  <span class="day">
+                    <%= t.departs.getDay() %>
+                  </span>
+                  <span class="month"><%=  Intl.DateTimeFormat('en', { month: 'long' }).format(t.departs.getMonth()) %>
+                  </span>
+                </time>
+                <!-- <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg"/> -->
+                <div class="info">
+                  <h2 class="title">Trip to
+                    <%= t.toAddress %>
+                  </h2>
+                  <!-- <p class="desc"> extract city to address t.city </p> -->
+                </div>
+                <div class="crud">
+                  <ul>
+                      <li class="edit" style="width:34%;">
+                      <a href="hopp/detination/<%= t._id %> ">
+                        <button id="btndelete" type="submit" class="btn-small red-text">EDIT</button>
+                      </a>
+                    </li>
+                    <li class="delete" style="width:33%;">
+                        
+                      <form action="hopp/destination/<%= t._id %>?_method=DELETE" method="POST" class="secondary-content">
+                        <button id="btndelete" type="submit" class="btn-small red-text">DELETE</button>
+                      </form>
+                      
+                    </li>
+     
+                  </ul>
+                </div>
+              </li>
+            <% }); %>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</main></body></html>
